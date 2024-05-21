@@ -5,8 +5,8 @@ import java.sql.Date;
 public class Tache {
     private Integer tache_id ;
     private String description_tache ;
-    private Date date_debut;
-    private Date date_fin;
+    private Date date_debutT;
+    private Date date_finT;
     private String statut ;
 
 
@@ -30,19 +30,19 @@ public class Tache {
     }
 
     public Date getDate_debut() {
-        return date_debut;
+        return date_debutT;
     }
 
     public void setDate_debut(Date date_debut) {
-        this.date_debut = date_debut;
+        this.date_debutT = date_debut;
     }
 
     public Date getDate_fin() {
-        return date_fin;
+        return date_finT;
     }
 
     public void setDate_fin(Date date_fin) {
-        this.date_fin = date_fin;
+        this.date_finT = date_fin;
     }
 
     public String getStatut() {

@@ -13,10 +13,16 @@ public class Projet {
     private Integer budget;
 
     // Constructeurs
-    public Projet() {
+
+
+    public Projet(int id, String nom_projet, String description_projet, Date dateDebut, Date dateFin, Integer budget) {
+        this.id = id;
+        this.nom_projet = nom_projet;
+        this.description_projet = description_projet;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.budget = budget;
     }
-
-
 
     // Getters et Setters
 
