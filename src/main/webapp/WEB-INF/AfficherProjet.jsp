@@ -35,27 +35,31 @@
         </div>
     </nav>
 
+    <div class="titleProjet">
+        <h1> Projets</h1>
 
+    </div>
 </header>
-<div>
-    <p>etsttstttttttttttttttttttttttttttttttttttttttttt<br>dhssssssshdhhds</p>
+
+<div class="para">
+    <h1 class="titre"> Voyez Vos Derniers Travaux </h1>
+</div>
+<div class="btnAjou">
+    <button class="add-project-btn">Ajouter un Projet</button>
 </div>
 
+        <div  class="main">
+            <c:forEach var="projet" items="${Projets}">
+            <div class="card">
+                <img src="https://allenif.com/wp-content/uploads/2020/11/hard-hat-plans-tape-measure_website.jpg" class="imgCard" alt="Image de la chambre">
+                <div class="card-body">
 
+                    <p class="card-text">Type: ${projet.getNom()}</p>
 
-
-
-<c:forEach var="projet" items="${Projets}">
-    <div class="col-md-4 mb-4"  id="chambres">
-        <div class="card">
-            <img src="https://allenif.com/wp-content/uploads/2020/11/hard-hat-plans-tape-measure_website.jpg" class="imgCard" alt="Image de la chambre">
-            <div class="card-body">
-
-                <p class="card-text">Type: ${projet.getNom()}</p>
-
+                </div>
             </div>
+            </c:forEach>
         </div>
-    </div>
-</c:forEach>
+
 </body>
 </html>

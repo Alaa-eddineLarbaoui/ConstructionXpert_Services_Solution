@@ -56,7 +56,7 @@
     <p class="text-muted">Who are in extremely love with eco friendly system..</p>
     <div class="row mt-4">
         <div class="col-md-4">
-            <div class="card">
+            <div class="card1">
                 <div class="card-body">
                     <h5 class="card-title">Interior Design</h5>
                     <p class="card-text">
@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
+            <div class="card1">
                 <div class="card-body">
                     <h5 class="card-title">Architecture Design</h5>
                     <p class="card-text">
@@ -76,7 +76,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
+            <div class="card1">
                 <div class="card-body">
                     <h5 class="card-title">Concept Design</h5>
                     <p class="card-text">
