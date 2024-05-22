@@ -25,7 +25,8 @@ public class ProjetDAOImpl implements ProjetDAO{
             Date date_debut = resultat.getDate("date_debut");
             Date date_fin = resultat.getDate("date_fin");
             Integer budget = resultat.getInt("budget");
-            Projet prt=new Projet(projet_id,nom_projet,description_projet,date_debut,date_fin,budget);
+            String picture_Url=resultat.getString("picture_Url");
+            Projet prt=new Projet(projet_id,nom_projet,description_projet,date_debut,date_fin,budget,picture_Url);
             System.out.println(prt.getNom());
             projets.add(prt);
         }

@@ -5,34 +5,32 @@ import java.util.Date;
 
 public class Projet {
 
-    private int id;
+    private Integer projet_id;
     private String nom_projet ;
     private String description_projet;
     private Date dateDebut;
     private Date dateFin;
     private Integer budget;
 
+
+    private String projet_Url;
+
     // Constructeurs
 
-
-    public Projet(int id, String nom_projet, String description_projet, Date dateDebut, Date dateFin, Integer budget) {
-        this.id = id;
+    public Projet(Integer projet_id, String nom_projet, String description_projet, Date dateDebut, Date dateFin, Integer budget, String projet_Url) {
+        this.projet_id = projet_id;
         this.nom_projet = nom_projet;
         this.description_projet = description_projet;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
         this.budget = budget;
+        this.projet_Url = projet_Url;
     }
+
 
     // Getters et Setters
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNom() {
         return nom_projet;
@@ -71,4 +69,12 @@ public class Projet {
     public void setBudget(Integer budget) {
         this.budget = budget;
     }
+    public String getProjet_Url() {
+        return projet_Url;
+    }
+
+    public void setProjet_Url(String projet_Url) {
+        this.projet_Url = projet_Url;
+    }
+
 }

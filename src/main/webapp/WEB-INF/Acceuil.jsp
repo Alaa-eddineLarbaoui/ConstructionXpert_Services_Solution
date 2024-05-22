@@ -11,7 +11,8 @@
     <style><%@ include file="Style.css"%></style>
 </head>
 <body>
-<header>
+<header class="header">
+
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">test</a>
@@ -40,9 +41,12 @@
 
     <div class="title">
         <h1> Gestion de Projets de Construction Efficace </h1>
-        <p class="description">If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each. You may be saying to yourself.</p>
-        <button class="btn">GET STARTED</button>
+        <p class="description">Planifiez, organisez et gérez vos projets de construction avec précision et efficacité grâce à une interface intuitive qui permet de visualiser, mettre à jour et supprimer des projets, des tâches et des ressources, tout en assurant la sécurité et l'intégrité de vos données.</p>
+
+
+        <a href="/ConstructionXpert_Services_Solution_war_exploded/AfficherProjet" class="btn">GET STARTED</a>
     </div>
+
 
 </header>
 
@@ -85,6 +89,16 @@
 </div>
 
 <!-- Bootstrap JS -->
+<script>
+    window.addEventListener("scroll", function () {
+        let navbar = document.querySelector(".navbar");
+        if (window.scrollY > 150) {
+            navbar.classList.add("bgadd");
+        } else {
+            navbar.classList.remove("bgadd");
+        }
+    });
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

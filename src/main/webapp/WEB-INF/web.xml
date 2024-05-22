@@ -11,4 +11,13 @@
         <servlet-name>Acceuil</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>AffichageProjet</servlet-name>
+        <servlet-class>com.octest.servlets.AffichageProjet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AffichageProjet</servlet-name>
+        <url-pattern>/AfficherProjet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
