@@ -1,0 +1,55 @@
+package com.octest.servlets;
+
+import com.octest.DAO.ProjetDAOImpl;
+import com.octest.beans.Projet;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
+import java.io.IOException;
+import java.sql.Date;
+import java.sql.SQLException;
+
+@WebServlet(name = "AjouterProjet", value = "/AjouterProjet")
+public class AjouterProjet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        ProjetDAOImpl pr=new ProjetDAOImpl();
+        try {
+            request.setAttribute("Projets",pr.ShowProjet());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+
+        this.getServletContext().getRequestDispatcher("/WEB-INF/AjouterProjet.jsp").forward(request, response);
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ProjetDAOImpl pr=new ProjetDAOImpl();
+        String nom_projet = request.getParameter("nom_projet");
+        String description_projet = request.getParameter("description_projet");
+        Date date_debut = Date.valueOf(request.getParameter("dateDebut"));
+        Date date_fin = Date.valueOf(request.getParameter("dateFin"));
+        Integer budget = Integer.valueOf(request.getParameter("budget"));
+        String picture_Url = request.getParameter("picture_Url");
+
+        Projet projet = new Projet(nom_projet, description_projet, date_debut, date_fin, budget,picture_Url);
+        try {
+            pr.AddProjet(projet);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        this.getServletContext().getRequestDispatcher("/WEB-INF/AfficherProjet.jsp").forward(request, response);
+
+    }
+}

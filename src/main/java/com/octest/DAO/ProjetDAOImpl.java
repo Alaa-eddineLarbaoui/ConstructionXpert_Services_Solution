@@ -37,29 +37,29 @@ public class ProjetDAOImpl implements ProjetDAO{
     @Override
     public void AddProjet(Projet Projet) throws SQLException, ClassNotFoundException {
 
-        String sql = "INSERT INTO projet (nomProjet,descriptionProjet, dateDebutProjet,dateFinProjet,Budget) VALUES (?,?,?,?,?)";
-        PreparedStatement s = ConnectionDAO.getConnection().prepareStatement(sql);
-        s.setString(1,Projet.getNom() );
-        s.setString(2,Projet.getDescription_projet() );
-        //s.setDate(3,Projet.getDateDebut());
-      //  s.setDate(4,Projet.getDateFin() );
-        s.setInt(5,Projet.getBudget() );
-        s.executeUpdate();
+        String sql = "INSERT INTO projet (nom_projet,description_projet, date_debut,date_fin,budget) VALUES (?,?,?,?,?)";
+        PreparedStatement Add = ConnectionDAO.getConnection().prepareStatement(sql);
+        Add.setString(1,Projet.getNom() );
+        Add.setString(2,Projet.getDescription_projet() );
+        Add.setDate(3,Projet.getDateDebut());
+        Add.setDate(4,Projet.getDateFin() );
+        Add.setInt(5,Projet.getBudget() );
+        Add.executeUpdate();
 
     }
 
+
+
+
     @Override
-    public void DeleteProjet(Integer idProjet) {
+    public void SupprimerProjet(Integer idProjet) {
 
     }
 
-    @Override
-    public Projet RecupererProjet(Integer idProjet) {
-        return null;
-    }
+
 
     @Override
-    public void UpdateProjet(Integer idProjet, Projet projet) {
+    public void ModifierProjet(Integer idProjet, Projet projet) {
 
     }
 }

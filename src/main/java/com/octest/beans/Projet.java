@@ -5,6 +5,8 @@ import java.util.Date;
 
 public class Projet {
 
+
+
     private Integer projet_id;
     private String nom_projet ;
     private String description_projet;
@@ -13,25 +15,43 @@ public class Projet {
     private Integer budget;
 
 
-    private String projet_Url;
+
+
+    private String picture_Url;
 
     // Constructeurs
 
-    public Projet(Integer projet_id, String nom_projet, String description_projet, Date dateDebut, Date dateFin, Integer budget, String projet_Url) {
+    public Projet(Integer projet_id, String nom_projet, String description_projet, Date dateDebut, Date dateFin, Integer budget, String picture_Url) {
         this.projet_id = projet_id;
         this.nom_projet = nom_projet;
         this.description_projet = description_projet;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
         this.budget = budget;
-        this.projet_Url = projet_Url;
+        this.picture_Url = picture_Url;
+    }
+
+    public Projet(String nomProjet, String descriptionProjet, Date dateDebut, Date dateFin, Integer budget, String pictureUrl) {
+        this.nom_projet = nomProjet;
+        this.description_projet = descriptionProjet;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.budget = budget;
+        this.picture_Url = pictureUrl;
+
     }
 
 
     // Getters et Setters
 
 
+    public Integer getProjet_id() {
+        return projet_id;
+    }
 
+    public void setProjet_id(Integer projet_id) {
+        this.projet_id = projet_id;
+    }
     public String getNom() {
         return nom_projet;
     }
@@ -46,16 +66,16 @@ public class Projet {
     public void setDescription_projet(String description_projet) {
         this.description_projet = description_projet;
     }
-    public Date getDateDebut() {
-        return dateDebut;
+    public java.sql.Date getDateDebut() {
+        return (java.sql.Date) dateDebut;
     }
 
     public void setDateDebut(Date dateDebut) {
         this.dateDebut = dateDebut;
     }
 
-    public Date getDateFin() {
-        return dateFin;
+    public java.sql.Date getDateFin() {
+        return (java.sql.Date) dateFin;
     }
 
     public void setDateFin(Date dateFin) {
@@ -69,12 +89,13 @@ public class Projet {
     public void setBudget(Integer budget) {
         this.budget = budget;
     }
-    public String getProjet_Url() {
-        return projet_Url;
+    public String getPicture_Url() {
+        return picture_Url;
     }
 
-    public void setProjet_Url(String projet_Url) {
-        this.projet_Url = projet_Url;
+    public void setPicture_Url(String picture_Url) {
+        this.picture_Url = picture_Url;
     }
+
 
 }

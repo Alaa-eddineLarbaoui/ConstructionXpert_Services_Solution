@@ -19,5 +19,13 @@
         <servlet-name>AffichageProjet</servlet-name>
         <url-pattern>/AfficherProjet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>AjouterProjet</servlet-name>
+        <servlet-class>com.octest.servlets.AjouterProjet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjouterProjet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
 
 </web-app>

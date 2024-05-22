@@ -44,9 +44,13 @@
 <div class="para">
     <h1 class="titre"> Voyez Vos Derniers Travaux </h1>
 </div>
-<div class="btnAjou">
-    <button class="add-project-btn">Ajouter un Projet</button>
-</div>
+
+<a href="/ConstructionXpert_Services_Solution_war_exploded/add">
+    <div class="btnAjou">
+        <button class="add-project-btn">Ajouter un Projet</button>
+    </div>
+</a>
+
 
         <div  class="main">
             <c:forEach var="projet" items="${Projets}">
