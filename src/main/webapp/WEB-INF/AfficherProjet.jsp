@@ -62,6 +62,11 @@
 
                 </div>
             </div>
+                <form action="Cancel" method="post">
+                    <input type="hidden" name="action" value="delete">
+                    <input type="hidden" name="projectId" value="${projet.getProjet_id()}">
+                    <input type="submit">
+                </form>
             </c:forEach>
         </div>
 

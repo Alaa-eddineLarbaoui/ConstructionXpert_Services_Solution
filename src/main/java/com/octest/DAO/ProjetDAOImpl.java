@@ -50,11 +50,16 @@ public class ProjetDAOImpl implements ProjetDAO{
 
 
 
-
     @Override
-    public void SupprimerProjet(Integer idProjet) {
 
-    }
+        public void SupprimerProjet(Integer projet_id) throws SQLException, ClassNotFoundException {
+            String sql = "DELETE FROM Projet WHERE projet_id= ?";
+            PreparedStatement statement = ConnectionDAO.getConnection().prepareStatement(sql);
+            statement.setInt(1, projet_id);
+            statement.executeUpdate();
+
+        }
+
 
 
 
