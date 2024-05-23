@@ -28,10 +28,10 @@
                     <li class="nav-item">
                         <a></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Services</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>

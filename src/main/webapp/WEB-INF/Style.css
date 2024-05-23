@@ -11,7 +11,7 @@
     width: 100%;
     top: 0;
     z-index: 1000;
-    height: 98px;
+    height: 70px;
     background: #ffffff47;
     backdrop-filter: blur(15px);
 
@@ -158,8 +158,12 @@ h1 {
     margin:60px auto;
     color:white;
     text-align: center;
+
+}
+.titleProjet >h1{
     font-size: 48px;
     font-weight: 600;
+
 }
 .titre{
     font-family: "Poppins", sans-serif;

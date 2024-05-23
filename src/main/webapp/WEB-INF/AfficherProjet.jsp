@@ -5,7 +5,8 @@
     <title>Title</title>
     <style><%@ include file="Style.css"%></style>
 
-    <style>body {
+    <style>
+        body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
@@ -98,12 +99,12 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil</a>
+                        <a class="nav-link text-black Bold text." href="#">Accueil</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Services</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
