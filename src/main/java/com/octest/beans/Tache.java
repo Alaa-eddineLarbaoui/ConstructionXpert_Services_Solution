@@ -4,6 +4,15 @@ import java.sql.Date;
 
 public class Tache {
     private Integer tache_id ;
+
+    public Tache(Integer tache_id, String description_tache, Date date_debutT, Date date_finT, String statut) {
+        this.tache_id = tache_id;
+        this.description_tache = description_tache;
+        this.date_debutT = date_debutT;
+        this.date_finT = date_finT;
+        this.statut = statut;
+    }
+
     private String description_tache ;
     private Date date_debutT;
     private Date date_finT;
