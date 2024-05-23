@@ -86,7 +86,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="body">
-<header class="header2">
+<header class="header2" >
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
