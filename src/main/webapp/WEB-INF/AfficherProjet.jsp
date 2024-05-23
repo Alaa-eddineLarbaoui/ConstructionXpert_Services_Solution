@@ -134,7 +134,7 @@
             <div class="card">
                 <a href="/ConstructionXpert_Services_Solution_war_exploded/Showdetails?projectId=${projet.projet_id}">
 
-                    <img src="https://allenif.com/wp-content/uploads/2020/11/hard-hat-plans-tape-measure_website.jpg" class="imgCard" alt="Image de la chambre">
+                    <img src="${projet.getPicture_Url()}" class="imgCard" alt="Image de la chambre">
                 </a>
 
                 <div class="card-body">

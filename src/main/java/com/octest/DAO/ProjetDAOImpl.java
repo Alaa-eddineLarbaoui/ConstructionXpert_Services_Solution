@@ -63,13 +63,14 @@ public class ProjetDAOImpl implements ProjetDAO{
     @Override
     public void AddProjet(Projet Projet) throws SQLException, ClassNotFoundException {
 
-        String sql = "INSERT INTO projet (nom_projet,description_projet, date_debut,date_fin,budget) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO projet (nom_projet,description_projet, date_debut,date_fin,budget,Picture_Url) VALUES (?,?,?,?,?,?)";
         PreparedStatement Add = ConnectionDAO.getConnection().prepareStatement(sql);
         Add.setString(1,Projet.getNom() );
         Add.setString(2,Projet.getDescription_projet() );
         Add.setDate(3,Projet.getDateDebut());
         Add.setDate(4,Projet.getDateFin() );
         Add.setInt(5,Projet.getBudget() );
+        Add.setString(6,Projet.getPicture_Url() );
         Add.executeUpdate();
 
     }

@@ -34,16 +34,18 @@ public class AjouterProjet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ProjetDAOImpl pr=new ProjetDAOImpl();
+        ProjetDAOImpl pr1=new ProjetDAOImpl();
         String nom_projet = request.getParameter("nom_projet");
         String description_projet = request.getParameter("description_projet");
         Date date_debut = Date.valueOf(request.getParameter("dateDebut"));
         Date date_fin = Date.valueOf(request.getParameter("dateFin"));
         Integer budget = Integer.valueOf(request.getParameter("budget"));
-        String picture_Url = request.getParameter("picture_Url");
+        String picture_Url = request.getParameter("Picture_Url");
 
         Projet projet = new Projet(nom_projet, description_projet, date_debut, date_fin, budget,picture_Url);
         try {
             pr.AddProjet(projet);
+            request.setAttribute("Projets",pr.ShowProjet());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {

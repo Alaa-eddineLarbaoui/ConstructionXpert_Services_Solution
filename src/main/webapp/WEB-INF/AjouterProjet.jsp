@@ -104,6 +104,9 @@
         <label for="budget">Budget:</label>
         <input type="number" id="budget" name="budget" required><br>
 
+        <label for="Picture_Url">Url d'image</label>
+        <input type="text" id="Picture_Url" name="Picture_Url" required><br>
+
         <a href="/ConstructionXpert_Services_Solution_war_exploded/add">
             <button type="submit">Ajouter</button>
         </a>
