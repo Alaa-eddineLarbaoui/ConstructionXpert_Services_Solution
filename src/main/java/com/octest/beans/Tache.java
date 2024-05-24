@@ -8,14 +8,14 @@ public class Tache {
     public Tache(Integer tache_id, String description_tache, Date date_debutT, Date date_finT, String statut) {
         this.tache_id = tache_id;
         this.description_tache = description_tache;
-        this.date_debutT = date_debutT;
-        this.date_finT = date_finT;
+        this.date_debut = date_debutT;
+        this.date_fin = date_finT;
         this.statut = statut;
     }
 
     private String description_tache ;
-    private Date date_debutT;
-    private Date date_finT;
+    private Date date_debut;
+    private Date date_fin;
     private String statut ;
 
 
@@ -39,19 +39,19 @@ public class Tache {
     }
 
     public Date getDate_debut() {
-        return date_debutT;
+        return date_debut;
     }
 
     public void setDate_debut(Date date_debut) {
-        this.date_debutT = date_debut;
+        this.date_debut = date_debut;
     }
 
     public Date getDate_fin() {
-        return date_finT;
+        return date_fin;
     }
 
     public void setDate_fin(Date date_fin) {
-        this.date_finT = date_fin;
+        this.date_fin = date_fin;
     }
 
     public String getStatut() {
