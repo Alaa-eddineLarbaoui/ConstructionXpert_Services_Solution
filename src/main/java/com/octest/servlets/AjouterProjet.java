@@ -15,14 +15,14 @@ public class AjouterProjet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        ProjetDAOImpl pr=new ProjetDAOImpl();
-        try {
-            request.setAttribute("Projets",pr.ShowProjet());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+//        ProjetDAOImpl pr=new ProjetDAOImpl();
+//        try {
+//            request.setAttribute("Projets",pr.ShowProjet());
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        } catch (ClassNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
 
 
 

@@ -3,6 +3,7 @@ package com.octest.servlets;
 import com.octest.DAO.ProjetDAOImpl;
 
 import com.octest.DAO.TacheDAOImpl;
+import com.octest.beans.Tache;
 
 
 import javax.servlet.*;
@@ -16,14 +17,7 @@ import java.sql.SQLException;
 public class ShowTaches extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ProjetDAOImpl pr=new ProjetDAOImpl();
-        try {
-            request.setAttribute("Projets",pr.ShowProjet());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+
         Integer id=Integer.valueOf(request.getParameter("id"));
         request.setAttribute("idProjet",id);
         TacheDAOImpl ta=new TacheDAOImpl();
@@ -38,7 +32,24 @@ public class ShowTaches extends HttpServlet {
 
     }
 
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+       Integer id=Integer.valueOf(request.getParameter("id"));
+        String description=request.getParameter("description_tache");
+        Date dateDebut=Date.valueOf(request.getParameter("date_debutT"));
+        Date DateFinTache=Date.valueOf(request.getParameter("DateFinTache"));
+        String StatutTache=request.getParameter("StatutTache");
+        Tache tach=new Tache(id,description,dateDebut,DateFinTache,StatutTache);
+        TacheDAOImpl td=new TacheDAOImpl();
+        try {
+            td.AddTaches(tach);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        this.getServletContext().getRequestDispatcher("/WEB-INF/ShowAddTaches.jsp").forward(request, response);
+
     }
 }

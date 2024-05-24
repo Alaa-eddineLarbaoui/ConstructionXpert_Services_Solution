@@ -35,4 +35,16 @@ public class TacheDAOImpl implements TacheDAO {
 
         return taches;
     }
+    @Override
+    public void AddTaches(Tache tache) throws SQLException, ClassNotFoundException {
+        String sql = "INSERT INTO tache (descriptionTache, dateDebutTache,dateFinTache,statutTache,idProjet) VALUES (?,?,?,?,?)";
+        PreparedStatement s = ConnectionDAO.getConnection().prepareStatement(sql);
+        s.setString(1,tache.getDescription_tache() );
+        s.setDate(2,tache.getDate_debut());
+        s.setDate(3,tache.getDate_fin());
+        s.setString(4, tache.getStatut());
+        //s.setInt(5,tache.getProjet_id());
+        s.executeUpdate();
+
+    }
 }
