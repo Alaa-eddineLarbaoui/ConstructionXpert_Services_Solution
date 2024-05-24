@@ -13,10 +13,6 @@ public class Projet {
     private Date dateDebut;
     private Date dateFin;
     private Integer budget;
-
-
-
-
     private String picture_Url;
 
     // Constructeurs
@@ -31,6 +27,7 @@ public class Projet {
         this.picture_Url = picture_Url;
     }
 
+
     public Projet(String nomProjet, String descriptionProjet, Date dateDebut, Date dateFin, Integer budget, String pictureUrl) {
         this.nom_projet = nomProjet;
         this.description_projet = descriptionProjet;
@@ -40,6 +37,8 @@ public class Projet {
         this.picture_Url = pictureUrl;
 
     }
+
+
 
 
     // Getters et Setters

@@ -13,7 +13,7 @@ public interface ProjetDAO {
     void AddProjet(Projet Projet) throws SQLException, ClassNotFoundException;
     void SupprimerProjet(Integer projet_id) throws SQLException, ClassNotFoundException;
 
+    Projet RecupererProjet(Integer projet_id) throws SQLException, ClassNotFoundException;
 
-
-    void ModifierProjet(Integer idProjet, Projet projet);
+    void UpdateProjet(Integer idProjet, Projet projet) throws SQLException, ClassNotFoundException;
 }

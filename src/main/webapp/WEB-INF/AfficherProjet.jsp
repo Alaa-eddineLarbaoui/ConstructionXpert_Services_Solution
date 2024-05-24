@@ -204,19 +204,28 @@
 
 
             <div class="card-footer">
-                <a href="projects?action=edit&projectId=${projet.projet_id}" class="btn btn-warning">
+                <a href="UpdateProjet?id=${projet.projet_id}" class="btn btn-warning">
                     <i class="bi bi-pencil me-2"></i> Edit
                 </a>
                 <a href="tasks?projectId=${projet.projet_id}" class="btn btn-info">
                     <i class="bi bi-list-check me-2"></i> View Tasks
                 </a>
-                <form action="projects" method="post" class="d-inline">
+
+                <form action="Cancel" method="post" class="d-inline">
                     <input type="hidden" name="action" value="delete">
                     <input type="hidden" name="projectId" value="${projet.projet_id}">
                     <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this project?')">
                         <i class="bi bi-trash me-2"></i> Delete
                     </button>
                 </form>
+
+                <form action="UpdateProjet" method="post" class="d-inline">
+                    <input type="hidden" name="itemId" value="${projet.projet_id}">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-trash me-2"></i> Update
+                    </button>
+                </form>
+
             </div>
             </div>
 

@@ -91,7 +91,36 @@ public class ProjetDAOImpl implements ProjetDAO{
 
 
     @Override
-    public void ModifierProjet(Integer idProjet, Projet projet) {
+    public void UpdateProjet(Integer projet_id, Projet Projet) throws SQLException, ClassNotFoundException {
+        String sqls = "UPDATE projet SET nom_projet=?,description_projet=?, date_debut=? , date_fin=? , budget=? WHERE projet_id=?";
+        PreparedStatement s = ConnectionDAO.getConnection().prepareStatement(sqls);
+        s.setString(1,Projet.getNom());
+        s.setString(2,Projet.getDescription_projet());
+        s.setDate(3,Projet.getDateDebut());
+        s.setDate(4,Projet.getDateFin());
+        s.setInt(5,Projet.getBudget());
+        s.setInt(6,projet_id);
+        s.executeUpdate();
 
+    }
+    @Override
+    public Projet RecupererProjet(Integer projet_id) throws SQLException, ClassNotFoundException {
+
+        String requet = "SELECT * FROM  Projet WHERE projet_id=?";
+        PreparedStatement statement = ConnectionDAO.getConnection().prepareStatement(requet);
+        statement.setInt(1, projet_id);
+        ResultSet resultat = statement.executeQuery();
+        Projet RecupProjet = null;
+        while (resultat.next()) {
+            String nom_projet = resultat.getString("nom_projet");
+            String description_projet = resultat.getString("description_projet");
+            Date dateDebut= resultat.getDate("date_debut");
+            Date dateFin = resultat.getDate("date_fin");
+            Integer budget = resultat.getInt("budget");
+            String picture_Url = resultat.getString("picture_Url");
+            RecupProjet = new Projet(projet_id, nom_projet,description_projet,dateDebut, dateFin,budget,picture_Url);
+
+        }
+        return RecupProjet;
     }
 }
