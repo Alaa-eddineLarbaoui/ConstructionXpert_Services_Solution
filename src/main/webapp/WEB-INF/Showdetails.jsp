@@ -1,101 +1,160 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 23/05/2024
-  Time: 11:05
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
-   <style>
-       body {
-           font-family: Arial, sans-serif;
-           margin: 0;
-           padding: 0;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           height: 100vh;
-           background-color: #f4f4f4;
-       }
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*  css de header */
+        .navbar-brand {
+            font-weight: bold;
+        }
 
-       .container {
-           display: flex;
+        .header2 {
+            height: 70%;
+            /*background-color: rgba(4, 9, 30, 0.7);*/
+            background: url("https://en.idei.club/uploads/posts/2023-06/1686013328_en-idei-club-p-building-construction-background-dizain-in-26.jpg") no-repeat bottom right/cover;
+        }
 
-           background-color: #ffffff;
-           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-           width: 95%;
-           height: 70%;
-       }
-       .image-container {
-           flex: 1;
-       }
+        .nav-link {
+            font-weight: bold;
+            color: white;
+            display: flex;
+            gap: 5px;
+        }
 
-       .image-container img {
-           width: 100%;
+        .navbar-expand-lg {
+            height: 80px;
+        }
 
-           height: 100%;
-           object-fit: cover;
-       }
+        .title {
+            width: 700px;
+            margin: 159px auto;
+            color: white;
+            text-align: center;
+        }
 
-       .content-container {
-           flex: 1;
-           padding: 20px;
-           display: flex;            /* Added */
-           flex-direction: column;   /* Added */
-           justify-content: center;
-       }
+        .title > h2 {
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: 800;
+            text-shadow: 0 0 20px white;
+        }
 
-       .content-container h1 {
-           margin-top: 0;
-       }
+        .title > h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: white;
+        }
 
-       .content-container p {
-           line-height: 1.6;
-       }
+        label {
+            margin-right: 10px;
+        }
 
-       .details p {
-           margin: 5px 0;
-       }
+        .navbar-nav {
+            height: 10%;
+        }
 
-       .rating {
-           color: gold;
-       }
+        /* //////////////////////////////////*/
 
-       .social-icons {
-           margin-top: 20px;
-       }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
 
-       .social-icons a {
-           margin-right: 10px;
-       }
+        .container {
+            display: flex;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 95%;
+            height: 70%;
+        }
 
-       .social-icons img {
-           width: 24px;
-           height: 24px;
-       }
-       .budget{
-           display: flex;
+        .image-container {
+            flex: 1;
+        }
 
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
+        .content-container {
+            flex: 1;
+            padding: 20px;
+            display: flex; /* Added */
+            flex-direction: column; /* Added */
+            justify-content: center;
+        }
 
-       }
-       .dollar{
-           margin-top: 4px;
-       }
+        .content-container h1 {
+            margin-top: 0;
+        }
 
-   </style>
+        .content-container p {
+            line-height: 1.6;
+        }
 
+        .details p {
+            margin: 5px 0;
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .budget {
+            display: flex;
+        }
+
+        .dollar {
+            margin-top: 4px;
+        }
+    </style>
 </head>
 <body>
+<header class="header2" >
 
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">test</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
 
+                    <li class="nav-item active">
+                        <a class="nav-link text-black Bold text." href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <div class="titleProjet">
+        <h1> Projets</h1>
 
-
+    </div>
+</header>
 <c:forEach var="projet" items="${Projets}">
 <div class="container">
     <div class="image-container">
@@ -132,3 +191,4 @@
 </c:forEach>
 </body>
 </html>
+
