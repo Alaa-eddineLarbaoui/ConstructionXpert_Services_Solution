@@ -207,7 +207,7 @@
                 <a href="UpdateProjet?id=${projet.projet_id}" class="btn btn-warning">
                     <i class="bi bi-pencil me-2"></i> Edit
                 </a>
-                <a href="tasks?projectId=${projet.projet_id}" class="btn btn-info">
+                <a href="ShowTaches?id=${projet.projet_id}" class="btn btn-info">
                     <i class="bi bi-list-check me-2"></i> View Tasks
                 </a>
 
