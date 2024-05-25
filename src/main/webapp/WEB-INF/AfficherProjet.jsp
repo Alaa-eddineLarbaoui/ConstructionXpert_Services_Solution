@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -19,17 +20,21 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        .navbar-light .navbar-brand{
+        .navbar-light .navbar-brand {
             margin-top: 5px;
         }
         .nav-link-shadow {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        .logo{
+        .logo {
             display: flex;
             gap: 10px;
         }
-        .nav-link{
+        .imgdeprojet{
+            height: 72%;
+
+        }
+        .nav-link {
             font-weight: bold;
             color: white;
             display: flex;
@@ -41,6 +46,14 @@
             flex-wrap: wrap;
             justify-content: left;
             padding: 20px;
+        }
+
+        .card-footer {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px; /* Add gap between buttons */
         }
 
         .card {
@@ -55,9 +68,13 @@
             flex-direction: column;
         }
 
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); /* Ombre plus intense au survol */
+        }
+
         .imgCard {
             width: 100%;
-            height: auto;
+            height: 100%;
             border-bottom: 1px solid #ddd;
             border-radius: 9px;
         }
@@ -67,11 +84,13 @@
             flex-grow: 1;
         }
 
-        .card-text {
-            font-size: 16px;
-            color: #333;
-            margin: 0 0 10px;
-        }
+
+         .card-text {
+             font-size: 16px;
+             color: #333;
+             margin: 0 0 10px;
+             font-family: 'Roboto', sans-serif; /* Appliquer la police Roboto */
+         }
 
         form {
             padding: 15px;
@@ -79,31 +98,6 @@
             margin: 0px;
         }
 
-        input[type="submit"] {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-
-
-
-        .card-footer {
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px; /* Add gap between buttons */
-        }
 
         .card-footer a,
         .card-footer form {
@@ -115,36 +109,23 @@
             font-size: 14px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            background-color: #444; /* Couleur de fond simple */
+            color: white; /* Couleur du texte */
         }
 
-        .btn-warning {
-            background-color: #ffc107;
-            color: white;
-        }
-
-        .btn-info {
-            background-color: #17a2b8;
-            color: white;
-        }
-
-        .btn-danger {
-            background-color: #dc3545;
-            color: white;
+        .btn:hover {
+            background-color: #666; /* Couleur de fond au survol */
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Ombre au survol */
         }
 
         .d-inline {
             display: inline;
             padding: 0px;
         }
-        .card-footer:last-child{
+
+        .card-footer:last-child {
             background-color: transparent;
         }
-
-
-
-
-
-
 
         /* Responsive adjustments */
         @media (max-width: 1200px) {
@@ -161,11 +142,9 @@
             }
         }
     </style>
-
 </head>
 <body class="body">
-<header class="header2" >
-
+<header class="header2">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <div class="logo">
@@ -185,13 +164,10 @@
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
-
     <div class="titleProjet">
         <h1> Projets</h1>
-
     </div>
 </header>
 
@@ -199,54 +175,41 @@
     <h1 class="titre"> Voyez Vos Derniers Travaux </h1>
 </div>
 
-
 <a href="/ConstructionXpert_Services_Solution_war_exploded/add">
     <div class="btnAjou">
         <button class="add-project-btn">Ajouter un Projet</button>
     </div>
 </a>
 
-
-<div  class="main">
-
+<div class="main">
     <c:forEach var="projet" items="${Projets}">
         <div class="card">
-            <a href="/ConstructionXpert_Services_Solution_war_exploded/Showdetails?projectId=${projet.projet_id}">
-
-                <img src="${projet.getPicture_Url()}" class="imgCard" alt="Image de la chambre">
-            </a>
+            <div class="imgdeprojet">
+                <a href="/ConstructionXpert_Services_Solution_war_exploded/Showdetails?projectId=${projet.projet_id}">
+                    <img src="${projet.getPicture_Url()}" class="imgCard" alt="Image de la chambre">
+                </a>
+            </div>
 
             <div class="card-body">
                 <p class="card-text">Name of Projet : ${projet.getNom()}</p>
-
-
-
-            <div class="card-footer">
-                <a href="UpdateProjet?id=${projet.projet_id}" class="btn btn-warning">
-                    <i class="bi bi-pencil me-2"></i> Edit
-                </a>
-                <a href="ShowTaches?id=${projet.projet_id}" class="btn btn-info">
-                    <i class="bi bi-list-check me-2"></i> View Tasks
-                </a>
-
-                <form action="Cancel" method="post" class="d-inline">
-                    <input type="hidden" name="action" value="delete">
-                    <input type="hidden" name="projectId" value="${projet.projet_id}">
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this project?')">
-                        <i class="bi bi-trash me-2"></i> Delete
-                    </button>
-                </form>
-
-
-
+                <div class="card-footer">
+                    <a href="UpdateProjet?id=${projet.projet_id}" class="btn">
+                        <i class="bi bi-pencil me-2"></i> Edit
+                    </a>
+                    <a href="ShowTaches?id=${projet.projet_id}" class="btn">
+                        <i class="bi bi-list-check me-2"></i> View Tasks
+                    </a>
+                    <form action="Cancel" method="post" class="d-inline">
+                        <input type="hidden" name="action" value="delete">
+                        <input type="hidden" name="projectId" value="${projet.projet_id}">
+                        <button type="submit" class="btn" onclick="return confirm('Are you sure you want to delete this project?')">
+                            <i class="bi bi-trash me-2"></i> Delete
+                        </button>
+                    </form>
+                </div>
             </div>
-            </div>
-
         </div>
-
     </c:forEach>
-
 </div>
-
 </body>
 </html>
