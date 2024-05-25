@@ -68,7 +68,9 @@
 
 }
 
-
+.container.text-center.my-5 {
+    color: #ffffff; /* Couleur du texte en blanc */
+}
 
 
 label {
@@ -78,6 +80,8 @@ label {
     height: 10%;
 }
 /* /////////////////////////////////////////////////////////*/
+/* les Cards dans la page d'accueil*/
+
 
 body {
     font-family: Arial, sans-serif;
@@ -103,14 +107,15 @@ p.text-muted {
     color: #6c757d;
 }
 
-.card1{
+.card1 {
     border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgb(255 255 255 / 34% );
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card1:hover {
     transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
 }
 
 .card1-title {
@@ -122,6 +127,12 @@ p.text-muted {
     font-size: 1rem;
     color: #666;
 }
+.container.text-center.my-5 {
+    color: #ffffff;
+}
+
+
+
 
 /*//////////*/
 .description {

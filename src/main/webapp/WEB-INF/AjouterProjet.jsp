@@ -58,7 +58,15 @@
             width: 100%;
             box-sizing: border-box;
         }
-
+        input[type="date"],
+        textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
         textarea {
             resize: vertical;
             height: 75px;
@@ -83,6 +91,17 @@
         a {
             text-decoration: none;
         }
+
+
+
+        .Inputdate{
+            display: flex;
+            gap: 32px;
+            margin-bottom: 9px;
+        }
+        .date1{
+            width: 50%;
+        }
     </style>
 </head>
 <body>
@@ -94,12 +113,19 @@
 
         <label for="description_projet">Description du Projet:</label>
         <textarea id="description_projet" name="description_projet" rows="4" required></textarea><br>
+        <div class="Inputdate">
+            <div class="date1">
+                <label for="dateDebut">Date de Début:</label>
+                <input type="date" id="dateDebut" name="dateDebut" required><br>
+            </div>
+            <div class="date1">
+                <label for="dateFin">Date de Fin:</label>
+                <input type="date" id="dateFin" name="dateFin" required><br>
 
-        <label for="dateDebut">Date de Début:</label>
-        <input type="date" id="dateDebut" name="dateDebut" required><br>
+            </div>
+        </div>
 
-        <label for="dateFin">Date de Fin:</label>
-        <input type="date" id="dateFin" name="dateFin" required><br>
+
 
         <label for="budget">Budget:</label>
         <input type="number" id="budget" name="budget" required><br>
@@ -110,6 +136,7 @@
         <a href="/ConstructionXpert_Services_Solution_war_exploded/add">
             <button type="submit">Ajouter</button>
         </a>
+        
     </form>
 </div>
 </body>
