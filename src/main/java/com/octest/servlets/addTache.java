@@ -14,7 +14,8 @@ import java.sql.SQLException;
 public class addTache extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Integer id=Integer.valueOf(request.getParameter("id"));
+        Integer id = Integer.valueOf(request.getParameter("id"));
+
         request.setAttribute("idProjet",id);
         TacheDAOImpl ta=new TacheDAOImpl();
         try {

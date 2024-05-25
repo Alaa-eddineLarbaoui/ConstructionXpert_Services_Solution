@@ -5,14 +5,6 @@
     <title>Ajouter une Tâche</title>
 </head>
 <body>
-<c:forEach var="tache" items="${Tache}">
-
-
-
-
-
-
-
 
 
 <div id="container">
@@ -31,11 +23,11 @@
         <input type="text" id="StatutTache" name="StatutTache" required><br>
 
         <label for="projet_id">Projet ID:</label>
-        <input type="hidden" id="projet_id" name="projet_id" value="${tache.projet_id}" required><br>
+        <input type="hidden" id="projet_id" name="projet_id" value="${idProjet}" required><br>
 
         <button type="submit">Ajouter</button>
     </form>
 </div>
-</c:forEach>
+
 </body>
 </html>

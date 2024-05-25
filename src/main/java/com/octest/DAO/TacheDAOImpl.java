@@ -46,4 +46,12 @@ public class TacheDAOImpl implements TacheDAO {
         s.setInt(5, tache.getProjet_id());
         s.executeUpdate();
     }
+    @Override
+    public void DeleteTaches(Integer idTache) throws SQLException, ClassNotFoundException {
+        String sql = "DELETE FROM Tache WHERE tache_id = ?";
+        PreparedStatement s = ConnectionDAO.getConnection().prepareStatement(sql);
+        s.setInt(1,idTache);
+        s.executeUpdate();
+
+    }
 }
