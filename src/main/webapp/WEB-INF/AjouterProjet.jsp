@@ -19,7 +19,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            margin: 1px 23px 1px 23px ;
+
         }
 
         #container {
@@ -27,8 +28,8 @@
             padding: 2px 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 55%;
+            /*max-width: 500px;*/
+            width: 100%;
             height: 98%;
         }
 
@@ -47,6 +48,14 @@
             font-weight: bold;
             color: #333;
         }
+
+
+        .date1 > label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333333;
+        }
+
 
         input[type="date"], input[type="text"],
         input[type="number"],
@@ -108,27 +117,32 @@
 <div id="container">
     <h1>Add projet </h1>
     <form action="add" method="post">
-        <label for="nom_projet">Nom du Projet:</label>
-        <input type="text" id="nom_projet" name="nom_projet" required><br>
-
-        <label for="description_projet">Description du Projet:</label>
-        <textarea id="description_projet" name="description_projet" rows="4" required></textarea><br>
         <div class="Inputdate">
             <div class="date1">
-                <label for="dateDebut">Date de Début:</label>
+                <label  class="label" for="nom_projet">Nom du Projet:</label>
+                <input type="text" id="nom_projet" name="nom_projet" required><br>
+
+            </div>
+            <div class="date1">
+                <label class="label" for="budget">Budget:</label>
+                <input type="number" id="budget" name="budget" required><br>
+            </div>
+        </div>
+        <div class="Inputdate">
+            <div class="date1">
+                <label class="label" for="dateDebut">Date de Début:</label>
                 <input type="date" id="dateDebut" name="dateDebut" required><br>
             </div>
             <div class="date1">
-                <label for="dateFin">Date de Fin:</label>
+                <label class="label" for="dateFin">Date de Fin:</label>
                 <input type="date" id="dateFin" name="dateFin" required><br>
 
             </div>
         </div>
 
 
-
-        <label for="budget">Budget:</label>
-        <input type="number" id="budget" name="budget" required><br>
+        <label for="description_projet">Description du Projet:</label>
+        <textarea id="description_projet" name="description_projet" rows="4" required></textarea><br>
 
         <label for="Picture_Url">Url d'image</label>
         <input type="text" id="Picture_Url" name="Picture_Url" required><br>
@@ -136,7 +150,7 @@
         <a href="/ConstructionXpert_Services_Solution_war_exploded/add">
             <button type="submit">Ajouter</button>
         </a>
-        
+
     </form>
 </div>
 </body>

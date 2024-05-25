@@ -5,28 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modifier Projet</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Ajouter du style pour rendre les labels bold */
+        label {
+            font-weight: bold;
+        }
+        .form1{
+            display: flex;
+            gap: 23px;
+        }
+        .form-group{
+            width: 100%;
+        }
+
+
+    </style>
 </head>
 <body>
 <div class="container mt-5">
     <h5>Modifier Projet</h5>
     <form action="UpdateProjet" method="post" class="mb-4">
         <input type="hidden" name="id" value="${Projet.projet_id}">
-        <div class="form-group">
-            <label for="Name">Nom du projet</label>
-            <input type="text" class="form-control" id="Name" name="Name" value="${Projet.getNom()}" placeholder="Entrer nom">
+
+
+        <div class="form1">
+
+            <div class="form-group">
+                <label for="Name">Nom du projet</label>
+                <input type="text" class="form-control" id="Name" name="Name" value="${Projet.getNom()}" placeholder="Entrer nom">
+            </div>
+
+            <div class="form-group">
+                <label for="Budget">Budget</label>
+                <input type="number" class="form-control" id="Budget" name="Budget" value="${Projet.budget}" placeholder="Entrer budget">
+            </div>
+
         </div>
-        <div class="form-group">
-            <label for="DateDebut">Date de début</label>
-            <input type="date" class="form-control" id="DateDebut" name="DateDebut" value="${Projet.dateDebut}">
+
+        <div class="form1">
+            <div class="form-group">
+                <label for="DateDebut">Date de début</label>
+                <input type="date" class="form-control" id="DateDebut" name="DateDebut" value="${Projet.dateDebut}">
+            </div>
+            <div class="form-group">
+                <label for="DateFin">Date de fin</label>
+                <input type="date" class="form-control" id="DateFin" name="DateFin" value="${Projet.dateFin}">
+            </div>
+
+
         </div>
-        <div class="form-group">
-            <label for="DateFin">Date de fin</label>
-            <input type="date" class="form-control" id="DateFin" name="DateFin" value="${Projet.dateFin}">
-        </div>
-        <div class="form-group">
-            <label for="Budget">Budget</label>
-            <input type="number" class="form-control" id="Budget" name="Budget" value="${Projet.budget}" placeholder="Entrer budget">
-        </div>
+
+
+
         <div class="form-group">
             <label for="Description">Description</label>
             <textarea class="form-control" id="Description" name="Description" placeholder="Entrer description">${Projet.description_projet}</textarea>
