@@ -19,6 +19,22 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+        .navbar-light .navbar-brand{
+            margin-top: 5px;
+        }
+        .nav-link-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .logo{
+            display: flex;
+            gap: 10px;
+        }
+        .nav-link{
+            font-weight: bold;
+            color: white;
+            display: flex;
+            gap: 5px;
+        }
 
         .main {
             display: flex;
@@ -151,24 +167,24 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">test</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="logo">
+                <img src="https://i.ibb.co/FqvDG8v/Design-sans-titre-6.png" alt="image de logo" style="width: 50px; height: 50px;">
+                <a class="navbar-brand" href="#">ConstructionXpert</a>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-
                     <li class="nav-item active">
-                        <a class="nav-link text-black Bold text." href="#">Accueil</a>
+                        <a class="nav-link nav-link-shadow" href="#">Accueil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link nav-link-shadow" href="#">Services</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link nav-link-shadow" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
+
         </div>
     </nav>
 

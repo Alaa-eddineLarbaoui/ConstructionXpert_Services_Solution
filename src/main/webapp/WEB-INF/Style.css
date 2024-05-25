@@ -5,7 +5,16 @@
 .navbar-brand {
     font-weight: bold;
 }
-
+.navbar-light .navbar-brand{
+    margin-top: 5px;
+}
+.nav-link-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.logo{
+    display: flex;
+    gap: 10px;
+}
 #nav{
 
     width: 100%;
