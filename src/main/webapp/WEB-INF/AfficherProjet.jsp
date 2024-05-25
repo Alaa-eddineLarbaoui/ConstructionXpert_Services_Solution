@@ -44,7 +44,7 @@
         }
 
         .card {
-            background-color: white;
+            background-color: #dca63d;
             border: 1px solid #ddd;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -59,6 +59,7 @@
             width: 100%;
             height: auto;
             border-bottom: 1px solid #ddd;
+            border-radius: 9px;
         }
 
         .card-body {
@@ -205,6 +206,7 @@
     </div>
 </a>
 
+
 <div  class="main">
 
     <c:forEach var="projet" items="${Projets}">
@@ -235,12 +237,7 @@
                     </button>
                 </form>
 
-                <form action="UpdateProjet" method="post" class="d-inline">
-                    <input type="hidden" name="itemId" value="${projet.projet_id}">
-                    <button type="submit" class="btn btn-danger">
-                        <i class="bi bi-trash me-2"></i> Update
-                    </button>
-                </form>
+
 
             </div>
             </div>
