@@ -35,7 +35,7 @@
                 <h2 class="card-title">Ressource N°: ${Ressources.getRessource_id()}</h2>
             </div>
             <div class="card-footer">
-                <a href="UpdateProjet?id=${projet.projet_id}" class="btn">
+                <a href="UpdateRessourceTache?id=${Ressources.getRessource_id()}" class="btn">
                     <i class="bi bi-pencil me-2"></i> Edit
                 </a>
 
