@@ -10,9 +10,10 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             display: flex;
+            justify-content: center;
             align-items: center;
-
-            margin: 0;
+            height: 100vh;
+            margin: 1px 23px 1px 23px;
         }
 
         #container {

@@ -6,7 +6,16 @@
     <title>Modifier Projet</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Ajouter du style pour rendre les labels bold */
+body{
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 1px 23px 1px 23px;
+}
+
         label {
             font-weight: bold;
         }

@@ -27,6 +27,11 @@
     </style>
 </head>
 <body>
+<a href="/ConstructionXpert_Services_Solution_war_exploded/addTache?id=${idProjet}">
+    <div class="btnAjou">
+        <button class="add-project-btn">Ajouter une tache</button>
+    </div>
+</a>
 <div class="container mt-5">
     <h2 class="mb-4">Liste des Tâches</h2>
     <c:forEach var="tache" items="${Tache}">
@@ -53,11 +58,7 @@
         </div>
     </c:forEach>
 </div>
-<a href="/ConstructionXpert_Services_Solution_war_exploded/addTache?id=${idProjet}">
-    <div class="btnAjou">
-        <button class="add-project-btn">Ajouter une tache</button>
-    </div>
-</a>
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

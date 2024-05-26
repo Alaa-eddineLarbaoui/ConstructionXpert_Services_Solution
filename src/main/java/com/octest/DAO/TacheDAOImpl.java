@@ -54,4 +54,35 @@ public class TacheDAOImpl implements TacheDAO {
         s.executeUpdate();
 
     }
+
+    @Override
+    public Tache RecupererTache(Integer idTache) throws SQLException, ClassNotFoundException {
+        String requet = "SELECT * FROM  Tache WHERE tache_id=?";
+        PreparedStatement statement = ConnectionDAO.getConnection().prepareStatement(requet);
+        statement.setInt(1, idTache);
+        ResultSet resultat = statement.executeQuery();
+        Tache th= null;
+        while (resultat.next()) {
+            String description_tache = resultat.getString("description_tache");
+            Date date_debut= resultat.getDate("date_debut");
+            Date date_fin = resultat.getDate("date_fin");
+            String statut = resultat.getString("statut");
+            Integer projet_id = resultat.getInt("projet_id");
+            th = new Tache (idTache,description_tache,date_debut,date_fin,statut,projet_id);
+        }
+        return th;
+    }
+    @Override
+    public void UpdateTache(Integer idTache, Tache tache) throws SQLException, ClassNotFoundException {
+        String sqls = "UPDATE tache SET description_tache=?, date_debut=?,date_fin=?,statut=?,projet_id=? WHERE tache_id=?";
+        PreparedStatement s = ConnectionDAO.getConnection().prepareStatement(sqls);
+        s.setString(1,tache.getDescription_tache());
+        s.setDate(2,tache.getDate_debut());
+        s.setDate(3,tache.getDate_fin());
+        s.setString(4,tache.getStatut());
+        s.setInt(5,tache.getProjet_id());
+        s.setInt(6,idTache);
+        s.executeUpdate();
+
+    }
 }

@@ -30,7 +30,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             /*max-width: 500px;*/
             width: 100%;
-            height: 98%;
+            height: 80%;
         }
 
         #container h1 {
