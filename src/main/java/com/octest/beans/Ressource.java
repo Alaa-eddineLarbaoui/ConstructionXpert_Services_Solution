@@ -21,6 +21,13 @@ public class Ressource {
         this.fournisseur = fournisseur;
         this.tache_id = tache_id;
     }
+    public Ressource( String ressource_nom, String type_ressource, Integer quantite, String fournisseur, Integer tache_id) {
+        this.ressource_nom = ressource_nom;
+        this.type_ressource = type_ressource;
+        this.quantite = quantite;
+        this.fournisseur = fournisseur;
+        this.tache_id = tache_id;
+    }
 
 
 

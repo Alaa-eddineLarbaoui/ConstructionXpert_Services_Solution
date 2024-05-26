@@ -9,6 +9,13 @@
 <body>
 
 <c:forEach var="Ressources" items="${Ressources}">
+    <a href="/ConstructionXpert_Services_Solution_war_exploded/AddRessource?id=${Ressources.tache_id}">
+        <div class="btnAjou">
+            <button class="add-project-btn">Ajouter une ressource</button>
+        </div>
+    </a>
+
+
     <div class="container mt-4">
         <div class="cardd">
             <div class="card-header">

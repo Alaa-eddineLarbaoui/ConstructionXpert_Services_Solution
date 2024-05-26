@@ -2,6 +2,7 @@ package com.octest.DAO;
 
 
 import com.octest.beans.Ressource;
+import com.octest.beans.Tache;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -18,22 +19,34 @@ public class RessourceDAOImpl implements RessourceDAO{
         statement.setInt(1,idTache);
         ResultSet resultat = statement.executeQuery();
 
-        while (resultat.next()) {
-            Integer idRessource=resultat.getInt("ressource_id");
-            String nomRessource=resultat.getString("ressource_nom");
-            String typeRessource = resultat.getString("type_ressource");
-            Integer quantiteRessource = resultat.getInt("quantite");
-            String infoFournisseur = resultat.getString("fournisseur");
-            Ressource rs=new Ressource(idRessource,nomRessource,typeRessource,quantiteRessource,infoFournisseur,idTache);
-            ressources.add(rs);
 
+        while (resultat.next()) {
+            Integer ressource_id=resultat.getInt("ressource_id");
+            String ressource_nom=resultat.getString("ressource_nom");
+            String type_ressource = resultat.getString("type_ressource");
+            Integer quantite = resultat.getInt("quantite");
+            String fournisseur = resultat.getString("fournisseur");
+            Integer tache_id = resultat.getInt("tache_id");
+
+            Ressource rs=new Ressource(ressource_id,ressource_nom,type_ressource,quantite,fournisseur,tache_id);
+            ressources.add(rs);
 
         }
         return ressources;
     }
 
 
-
+    @Override
+    public void AddRessources(Ressource ressource) throws SQLException, ClassNotFoundException {
+        String sql = "INSERT INTO Ressource (ressource_nom, type_ressource, quantite, fournisseur, tache_id) VALUES (?, ?, ?, ?, ?)";
+        PreparedStatement s = ConnectionDAO.getConnection().prepareStatement(sql);
+        s.setString(1, ressource.getRessource_nom());
+        s.setString(2, ressource.getType_ressource());
+        s.setInt(3, ressource.getQuantite());
+        s.setString(4, ressource.getFournissuer());
+        s.setInt(5, ressource.getTache_id());
+        s.executeUpdate();
+    }
 
 
 
