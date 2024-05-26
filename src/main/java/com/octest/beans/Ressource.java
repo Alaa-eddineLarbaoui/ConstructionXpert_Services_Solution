@@ -3,11 +3,25 @@ package com.octest.beans;
 import java.util.Date;
 
 public class Ressource {
-    private int ressource_id;
+    private Integer ressource_id;
     private String ressource_nom;
     private String type_ressource;
     private Integer quantite;
-    private String fournissuer;
+    private String fournisseur;
+    private  Integer tache_id;
+
+
+    //Constructor :
+
+    public Ressource(Integer ressource_id, String ressource_nom, String type_ressource, Integer quantite, String fournisseur, Integer tache_id) {
+        this.ressource_id = ressource_id;
+        this.ressource_nom = ressource_nom;
+        this.type_ressource = type_ressource;
+        this.quantite = quantite;
+        this.fournisseur = fournisseur;
+        this.tache_id = tache_id;
+    }
+
 
 
 
@@ -46,11 +60,19 @@ public class Ressource {
     }
 
     public String getFournissuer() {
-        return fournissuer;
+        return fournisseur;
     }
 
     public void setFournissuer(String fournissuer) {
-        this.fournissuer = fournissuer;
+        this.fournisseur = fournissuer;
+    }
+
+    public Integer getTache_id() {
+        return tache_id;
+    }
+
+    public void setTache_id(Integer tache_id) {
+        this.tache_id = tache_id;
     }
 
 

@@ -48,6 +48,11 @@
                 <a href="UpdateTache?id=${tache.tache_id}" class="btn btn-warning btn-custom">
                     <i class="bi bi-pencil"></i> Edit
                 </a>
+
+                <a href="ShowRessourceTache?id=${tache.tache_id}" class="btn btn-warning btn-custom">
+                    <i class="bi bi-pencil"></i> show ressource
+                </a>
+
                 <form action="DeleteTache" method="post" class="d-inline">
                     <input type="hidden" name="action" value="delete">
                     <input type="hidden" name="tacheId" value="${tache.tache_id}">
