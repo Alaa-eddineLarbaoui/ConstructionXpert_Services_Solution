@@ -69,7 +69,9 @@ public class TacheDAOImpl implements TacheDAO {
             String statut = resultat.getString("statut");
             Integer projet_id = resultat.getInt("projet_id");
             th = new Tache (idTache,description_tache,date_debut,date_fin,statut,projet_id);
+            System.out.println(th);
         }
+
         return th;
     }
     @Override

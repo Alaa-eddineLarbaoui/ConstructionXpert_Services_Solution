@@ -42,8 +42,10 @@
                 <p><strong>Date fin :</strong> ${tache.date_fin}</p>
                 <p class="card-text"><strong>Statut :</strong> ${tache.statut}</p>
             </div>
+
+
             <div class="card-footer card-footer-custom">
-                <a href="UpdateProjet?id=${tache.projet_id}" class="btn btn-warning btn-custom">
+                <a href="UpdateTache?id=${tache.tache_id}" class="btn btn-warning btn-custom">
                     <i class="bi bi-pencil"></i> Edit
                 </a>
                 <form action="DeleteTache" method="post" class="d-inline">
@@ -55,6 +57,8 @@
                     </button>
                 </form>
             </div>
+
+
         </div>
     </c:forEach>
 </div>
