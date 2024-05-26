@@ -66,11 +66,11 @@ public class Ressource {
         this.quantite = quantite;
     }
 
-    public String getFournissuer() {
+    public String getFournisseur() {
         return fournisseur;
     }
 
-    public void setFournissuer(String fournissuer) {
+    public void setFournisseur(String fournissuer) {
         this.fournisseur = fournissuer;
     }
 

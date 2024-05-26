@@ -14,6 +14,7 @@ public class ShowRessourceTache extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer id=Integer.valueOf(request.getParameter("id"));
+        request.setAttribute("idtache",id);
         RessourceDAOImpl Rc=new RessourceDAOImpl();
         try {
             request.setAttribute("Ressources",Rc.ShowRessources(id));

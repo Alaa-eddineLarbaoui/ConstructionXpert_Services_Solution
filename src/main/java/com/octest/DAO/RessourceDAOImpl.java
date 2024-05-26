@@ -43,7 +43,7 @@ public class RessourceDAOImpl implements RessourceDAO{
         s.setString(1, ressource.getRessource_nom());
         s.setString(2, ressource.getType_ressource());
         s.setInt(3, ressource.getQuantite());
-        s.setString(4, ressource.getFournissuer());
+        s.setString(4, ressource.getFournisseur());
         s.setInt(5, ressource.getTache_id());
         s.executeUpdate();
     }

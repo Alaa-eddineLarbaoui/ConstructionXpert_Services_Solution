@@ -22,8 +22,6 @@ public class AddRessource extends HttpServlet {
         request.setAttribute("idtache",id);
 
 
-
-
         this.getServletContext().getRequestDispatcher("/WEB-INF/AddRessource.jsp").forward(request, response);
     }
 
@@ -38,7 +36,12 @@ public class AddRessource extends HttpServlet {
         Ressource ressource = new Ressource(ressource_nom, type_ressource, quantite, fournisseur, tache_id);
         RessourceDAOImpl ressourceDAO = new RessourceDAOImpl();
 
+        Integer id = Integer.valueOf(request.getParameter("tache_id"));
+
         try {
+
+            request.setAttribute("idtache",id);
+
             ressourceDAO.AddRessources(ressource);
             request.setAttribute("Ressources", ressourceDAO.ShowRessources(tache_id));
         } catch (SQLException | ClassNotFoundException e) {
