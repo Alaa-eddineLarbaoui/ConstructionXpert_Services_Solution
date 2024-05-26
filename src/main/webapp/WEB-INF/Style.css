@@ -109,13 +109,13 @@ p.text-muted {
 
 .card1 {
     border: none;
-    box-shadow: 0 2px 5px rgb(255 255 255 / 34% );
+    box-shadow:0 1px 5px #ffffff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card1:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgb(255, 218, 7);
 }
 
 .card1-title {
@@ -145,7 +145,7 @@ p.text-muted {
     font-size: 1em;
     padding: 10px 20px;
     color: #fff;
-    background-color: #d4af37;
+    background-color: #dca63d;
     border: none;
     border-radius: 5px;
     cursor: pointer;
