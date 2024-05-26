@@ -49,6 +49,14 @@ public class RessourceDAOImpl implements RessourceDAO{
     }
 
 
+    @Override
+    public void DeleteRessource(Integer idRessource) throws SQLException, ClassNotFoundException {
+        String sql = "DELETE FROM Ressource WHERE ressource_id = ?";
+        PreparedStatement s = ConnectionDAO.getConnection().prepareStatement(sql);
+        s.setInt(1,idRessource);
+        s.executeUpdate();
+
+    }
 
 
 
