@@ -26,7 +26,7 @@
                         <a class="nav-link nav-link-shadow" href="#">Accueil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link nav-link-shadow" href="#">Services</a>
+                        <a class="nav-link nav-link-shadow" href="/ConstructionXpert_Services_Solution_war_exploded/AfficherProjet">Projets</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link nav-link-shadow" href="#">Contact</a>

@@ -154,10 +154,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link nav-link-shadow" href="#">Accueil</a>
+                        <a class="nav-link nav-link-shadow" href="/ConstructionXpert_Services_Solution_war_exploded/Acceuil">Accueil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link nav-link-shadow" href="#">Services</a>
+                        <a class="nav-link nav-link-shadow" href="#">Projets</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link nav-link-shadow" href="#">Contact</a>

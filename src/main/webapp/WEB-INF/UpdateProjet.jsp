@@ -26,13 +26,19 @@ body{
         .form-group{
             width: 100%;
         }
-
+.TitreModifier{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-weight: bold;
+    font-size: 33px;
+}
 
     </style>
 </head>
 <body>
 <div class="container mt-5">
-    <h5>Modifier Projet</h5>
+    <h5 class="TitreModifier">Modifier Projet</h5>
     <form action="UpdateProjet" method="post" class="mb-4">
         <input type="hidden" name="id" value="${Projet.projet_id}">
 

@@ -28,8 +28,8 @@
 
         .titleProjet {
             width: 700px;
-            margin: 159px auto;
-            color: white;
+            margin: 118px auto;
+            color: #1f1e1e;
             text-align: center;
         }
 
@@ -37,7 +37,7 @@
             font-size: 40px;
             text-transform: uppercase;
             font-weight: 800;
-            text-shadow: 0 0 20px white;
+            text-shadow: 0 0 20px #ffffff;
         }
 
         /* CSS pour la section des projets */
@@ -92,6 +92,9 @@
         .dollar {
             margin-left: 5px;
             font-size: 18px;
+        }
+        body{
+            background-color: black;
         }
     </style>
 </head>

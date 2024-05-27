@@ -127,15 +127,36 @@
 
         }
 
+        .btn {
+            font-size: 14px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            background-color: #444; /* Couleur de fond simple */
+            color: white; /* Couleur du texte */
+        }
 
+        .btn:hover {
+            background-color: #666; /* Couleur de fond au survol */
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Ombre au survol */
+        }
 
         .d-inline{
             margin-top: 16px;
+            transition: background-color 0.3s ease;
+            background-color: #444; /* Couleur de fond simple */
+            color: white; /* Couleur du texte */
+        }
+        .d-inline:hover {
+            background-color: #666; /* Couleur de fond au survol */
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Ombre au survol */
         }
 
         .card-img-container {
             flex: 0 0 150px;
             margin-right: 1rem;
+            justify-content: center;
+            align-items: center;
+            display: flex;
         }
         .card-img-container img {
             width: 100%;
@@ -152,6 +173,55 @@
             margin-right: 0px;
             margin-left: 35px;
         }
+
+
+        .titre{
+            font-family: "Poppins", sans-serif;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.2em;
+            margin-bottom: 55px;
+            margin-top: 55px;
+            font-weight: 600;
+            font-size: 36px;
+        }
+        .para{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin: 20px auto;
+        }
+        /* style du button */
+        .add-project-btn {
+            background-color: #dca63d; /* Couleur de fond dorée */
+            color: black; /* Couleur du texte */
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 35px -8px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        /* Ombre pour le texte */
+        .add-project-btn {
+            font-weight: bold;
+        }
+
+        /* Effet hover */
+        .add-project-btn:hover {
+            background-color: #b8860b; /* Couleur de survol dorée plus foncée */
+            color: white; /* Couleur du texte au survol */
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Ombre de texte au survol */
+        }
+        .btnAjou{
+            margin-top: 18px;
+            margin-left: 10px;
+        }
+
 
         /* Responsive styles */
         @media (max-width: 1200px) {
@@ -209,7 +279,7 @@
                         <a class="nav-link nav-link-shadow" href="#">Accueil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link nav-link-shadow" href="#">Services</a>
+                        <a class="nav-link nav-link-shadow" href="#">Projets</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link nav-link-shadow" href="#">Contact</a>
@@ -222,11 +292,21 @@
         <h1>Ressources</h1>
     </div>
 </header>
+<div class="para">
+    <h1 class="titre"> Voyez Vos Ressources</h1>
+</div>
+
 
 <div class="container mt-4">
-    <a href="/ConstructionXpert_Services_Solution_war_exploded/AddRessource?id=${idtache}" class="btn btn-primary mb-3">
-        <i class="bi bi-plus-circle me-2"></i> Ajouter une ressource
+    <a href="/ConstructionXpert_Services_Solution_war_exploded/AddRessource?id=${idtache}" >
+
+        <div class="btnAjou">
+            <button  class="add-project-btn"></i> Ajouter une ressource</button>
+        </div>
     </a>
+
+
+
     <div class="resource-container">
         <c:forEach var="Ressources" items="${Ressources}">
             <div class="card mb-4">
@@ -247,7 +327,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="UpdateRessourceTache?id=${Ressources.getRessource_id()}" class="btn btn-warning">
+                        <a href="UpdateRessourceTache?id=${Ressources.getRessource_id()}" class="btn">
                             <i class="bi bi-pencil me-2"></i> Modifier
                         </a>
                         <form action="DeleteRessource" method="post" class="d-inline">

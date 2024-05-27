@@ -39,6 +39,7 @@ public class UpdateRessourceTache extends HttpServlet {
 
         try {
             re.UpdateRessource(idRessource,rc);
+            request.setAttribute("Ressources",re.ShowRessources(idTache));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {

@@ -38,10 +38,12 @@ public class addTache extends HttpServlet {
 
         Tache tache = new Tache(description_tache, date_debut, date_fin, statut, projet_id);
         TacheDAOImpl tacheDAO = new TacheDAOImpl();
-
+        Integer id = Integer.valueOf(request.getParameter("projet_id"));
         try {
             tacheDAO.AddTaches(tache);
             request.setAttribute("Tache", tacheDAO.ShowTaches(projet_id));
+
+            request.setAttribute("idProjet",id);
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }

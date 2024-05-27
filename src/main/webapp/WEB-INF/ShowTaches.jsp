@@ -12,7 +12,9 @@
     <style>
 
         /* Style de header */
-
+        body{
+            background-color: black;
+        }
 
         .navbar-brand {
             font-weight: bold;
@@ -83,6 +85,112 @@
         .btn-custom i {
             margin-right: 5px;
         }
+
+
+        .card {
+            display: flex;
+
+            align-items: center;
+            flex: 1 1 calc(50% - 1rem);
+            flex-direction: row;
+
+            flex-wrap: wrap;
+            justify-content: left;
+            background-color: #d9d2c5;
+            border: 1px solid #b0a094;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4);
+        }
+
+        .btn {
+            font-size: 14px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            background-color: #444;
+            color: white;
+            padding: 0.375rem 0.75rem;
+            width: 131PX;
+        }
+
+        .btn:hover {
+            background-color: #666;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .d-inline {
+
+            transition: background-color 0.3s ease;
+            background-color: #444;
+            color: white;
+        }
+
+        .d-inline:hover {
+            background-color: #666;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        .mb-4 {
+            margin-bottom: 1.5rem !important;
+            color: white;
+        }
+
+
+
+        .card-img-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .card-footer-custom {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .card-buttons {
+            margin-top: auto; /* Aligne les boutons en bas de la carte */
+        }
+
+        /* style du button */
+        .add-project-btn {
+            background-color: #dca63d; /* Couleur de fond dorée */
+            color: black; /* Couleur du texte */
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 36px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        /* Ombre pour le texte */
+        .add-project-btn {
+            font-weight: bold;
+        }
+
+        /* Effet hover */
+        .add-project-btn:hover {
+            background-color: #b8860b; /* Couleur de survol dorée plus foncée */
+            color: white; /* Couleur du texte au survol */
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Ombre de texte au survol */
+        }
+        .btnAjou{
+            margin-top: 18px;
+            margin-left: 10px;
+        }
+
+
     </style>
 </head>
 
@@ -103,7 +211,7 @@
                         <a class="nav-link nav-link-shadow" href="#">Accueil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link nav-link-shadow" href="#">Services</a>
+                        <a class="nav-link nav-link-shadow" href="/ConstructionXpert_Services_Solution_war_exploded/AfficherProjet">Projets</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link nav-link-shadow" href="#">Contact</a>
@@ -126,7 +234,7 @@
     </div>
 </a>
 <div class="container mt-5">
-    <h2 class="mb-4">Liste des Tâches</h2>
+    <h2 class="mb-4 white-text">Liste des Tâches</h2>
     <c:forEach var="tache" items="${Tache}">
         <div class="card card-custom">
             <div class="card-body">
@@ -150,9 +258,10 @@
                     <input type="hidden" name="action" value="delete">
                     <input type="hidden" name="tacheId" value="${tache.tache_id}">
                     <input type="hidden" name="projet_id" value="${tache.projet_id}">
-                    <button type="submit" class="btn btn-danger btn-custom" onclick="return confirm('Are you sure you want to delete this project?')">
+                    <button type="submit" class="btn btn-danger btn-custom width-126" onclick="return confirm('Are you sure you want to delete this project?')">
                         <i class="bi bi-trash"></i> Delete
                     </button>
+
                 </form>
             </div>
 
