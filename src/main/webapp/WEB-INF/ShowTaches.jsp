@@ -10,6 +10,65 @@
     <title>Liste des Tâches</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+
+        /* Style de header */
+
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .navbar-light .navbar-brand{
+            margin-top: 5px;
+        }
+        .nav-link-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .logo{
+            display: flex;
+            gap: 10px;
+        }
+
+        .header2{
+
+            height: 65%;
+            /*background-color: rgba(4, 9, 30, 0.7);*/
+            background :url("https://en.idei.club/uploads/posts/2023-06/1686013328_en-idei-club-p-building-construction-background-dizain-in-26.jpg")no-repeat bottom right/cover ;
+        }
+        .nav-link{
+            font-weight: bold;
+            color: white;
+            display: flex;
+            gap: 5px;
+        }
+        .navbar-expand-lg{
+            height: 80px;
+        }
+
+
+        .titleProjet{
+
+            width:700px;
+            margin:118px auto;
+            color:white;
+            text-align: center;
+
+
+        }
+        .titleProjet >h1{
+            font-size: 48px;
+            font-weight: 600;
+            color: black;
+
+            text-transform:uppercase;
+
+            text-shadow: 0 0 20px white;
+
+        }
+
+
+        /*///////////////////// */
+
+
         .card-custom {
             margin-bottom: 20px;
         }
@@ -26,6 +85,40 @@
         }
     </style>
 </head>
+
+
+
+
+
+<header class="header2">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <div class="logo">
+                <img src="https://i.ibb.co/FqvDG8v/Design-sans-titre-6.png" alt="image de logo" style="width: 50px; height: 50px;">
+                <a class="navbar-brand" href="#">ConstructionXpert</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-shadow" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-shadow" href="#">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-shadow" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="titleProjet">
+        <h1> Taches</h1>
+    </div>
+</header>
+
+
+
 <body>
 <a href="/ConstructionXpert_Services_Solution_war_exploded/addTache?id=${idProjet}">
     <div class="btnAjou">

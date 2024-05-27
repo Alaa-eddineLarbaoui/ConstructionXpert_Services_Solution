@@ -9,59 +9,47 @@
 
     <style>
         /* Style de header */
-
-
         .navbar-brand {
             font-weight: bold;
         }
-        .navbar-light .navbar-brand{
+        .navbar-light .navbar-brand {
             margin-top: 5px;
         }
         .nav-link-shadow {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        .logo{
+        .logo {
             display: flex;
             gap: 10px;
         }
 
-        .header2{
-
+        .header2 {
             height: 65%;
-            /*background-color: rgba(4, 9, 30, 0.7);*/
-            background :url("https://en.idei.club/uploads/posts/2023-06/1686013328_en-idei-club-p-building-construction-background-dizain-in-26.jpg")no-repeat bottom right/cover ;
+            background: url("https://en.idei.club/uploads/posts/2023-06/1686013328_en-idei-club-p-building-construction-background-dizain-in-26.jpg") no-repeat bottom right / cover;
         }
-        .nav-link{
+        .nav-link {
             font-weight: bold;
             color: white;
             display: flex;
             gap: 5px;
         }
-        .navbar-expand-lg{
+        .navbar-expand-lg {
             height: 80px;
         }
 
-
-        .titleProjet{
-
-            width:700px;
-            margin:118px auto;
-            color:white;
+        .titleProjet {
+            width: 700px;
+            margin: 118px auto;
+            color: white;
             text-align: center;
-
-
         }
-        .titleProjet >h1{
+        .titleProjet > h1 {
             font-size: 48px;
             font-weight: 600;
             color: black;
-
-            text-transform:uppercase;
-
+            text-transform: uppercase;
             text-shadow: 0 0 20px white;
-
         }
-
 
         /*///////////////////// */
         body {
@@ -91,32 +79,60 @@
         .btn {
             font-size: 1em;
             padding: 0.375rem 0.75rem;
+
         }
         .card-footer {
             display: flex;
-            justify-content: space-between;
+            /* justify-content: space-between; */
             align-items: center;
+            height: 20%;
+            justify-content: right;
+            gap: 20px;
         }
         .resource-container {
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
         }
-        .card {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-            padding: 1rem;
-            flex: 1 1 calc(50% - 1rem);
-            max-width: calc(50% - 1rem);
-            flex-wrap: wrap;
-            justify-content: left;
-        }
+
+            .card {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                /*background-color: #dca63d; /* Changer la couleur de fond pour une meilleure visibilité */
+                color: #333; /* Couleur du texte pour un meilleur contraste */
+                /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+                transition: transform 0.2s;
+               /* padding: 1rem;*/
+                flex: 1 1 calc(50% - 1rem);
+                max-width: calc(50% - 1rem);
+                flex-wrap: wrap;
+                justify-content: left;
+                /*border: 1px solid #ddd;  */
+
+                background-color: #d9d2c5;  /* Un gris clair avec une nuance chaude */
+                border: 1px solid #b0a094;  /* Un bord légèrement plus foncé pour la définition */
+                border-radius: 8px;
+                /*padding: 20px;*/
+                /*margin: 20px;*/
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                /* Texte en gris foncé pour une bonne lisibilité */
+
+            }
+
         .card:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); /* Ombre plus intense au survol */
+
         }
+
+
+
+        .d-inline{
+            margin-top: 16px;
+        }
+
         .card-img-container {
             flex: 0 0 150px;
             margin-right: 1rem;
@@ -132,8 +148,8 @@
         .imgRessource {
             display: flex;
         }
-        .container{
-           margin-right: 0px;
+        .container {
+            margin-right: 0px;
             margin-left: 35px;
         }
 
@@ -180,7 +196,6 @@
 </head>
 <body>
 
-
 <header class="header2">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -204,10 +219,9 @@
         </div>
     </nav>
     <div class="titleProjet">
-        <h1> Projets</h1>
+        <h1>Ressources</h1>
     </div>
 </header>
-
 
 <div class="container mt-4">
     <a href="/ConstructionXpert_Services_Solution_war_exploded/AddRessource?id=${idtache}" class="btn btn-primary mb-3">
