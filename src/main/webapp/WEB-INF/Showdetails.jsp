@@ -96,6 +96,9 @@
         body{
             background-color: black;
         }
+        .Content{
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -132,13 +135,13 @@
             <img src="${projet.getPicture_Url()}" alt="Lavender ambient interior">
         </div>
         <div class="content-container">
-            <h1>${projet.getNom()}</h1>
-            <p>${projet.getDescription_projet()}</p>
+            <h1 class="Content">${projet.getNom()}</h1>
+            <p class="Content">${projet.getDescription_projet()}</p>
             <div class="details">
-                <p><strong>Date début</strong>: ${projet.getDateDebut()}</p>
-                <p><strong>Date fin</strong>: ${projet.getDateFin()}</p>
+                <p class="Content"><strong>Date début</strong>: ${projet.getDateDebut()}</p>
+                <p class="Content"><strong>Date fin</strong>: ${projet.getDateFin()}</p>
                 <div class="budget">
-                    <p><strong>Budget</strong>: ${projet.getBudget()}</p>
+                    <p class="Content"><strong>Budget</strong>: ${projet.getBudget()}</p>
                     <div class="dollar">
                         <svg height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>

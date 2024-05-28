@@ -49,15 +49,15 @@
 
 
 <div class="container text-center my-5">
-    <h2>What we offer to our clients</h2>
-    <p class="text-muted">Who are in extremely love with eco friendly system..</p>
+    <h2>Ce que nous offrons à nos clients</h2>
+    <p class="text-muted">Construisez l'avenir avec notre application de gestion de projets de construction, efficace et durable.</p>
     <div class="row mt-4">
         <div class="col-md-4">
             <div class="card1">
                 <div class="card-body">
-                    <h5 class="card-title">Interior Design</h5>
+                    <h5 class="card-title">Gestion de Projet</h5>
                     <p class="card-text">
-                        Sony laptops are among the most well known laptops on today’s market. Sony is a name that over time has established itself as creating a solid product.
+                        La gestion des projets consiste à planifier, organiser et suivre toutes les activités nécessaires pour atteindre les objectifs d'un projet.
                     </p>
                 </div>
             </div>
@@ -65,9 +65,9 @@
         <div class="col-md-4">
             <div class="card1">
                 <div class="card-body">
-                    <h5 class="card-title">Architecture Design</h5>
+                    <h5 class="card-title">Gestion des Taches</h5>
                     <p class="card-text">
-                        Computer users and programmers have become so accustomed to using Windows, even for the changing capabilities and the appearances of the graphical.
+                        La gestion des tâches consiste à planifier, organiser et suivre toutes les activités nécessaires pour atteindre les objectifs d'un projet.
                     </p>
                 </div>
             </div>
@@ -75,9 +75,9 @@
         <div class="col-md-4">
             <div class="card1">
                 <div class="card-body">
-                    <h5 class="card-title">Concept Design</h5>
+                    <h5 class="card-title">Gestion des Ressources</h5>
                     <p class="card-text">
-                        Can you imagine what we will be downloading in another twenty years? I mean who would have ever thought that you could record sound.
+                        La gestion des ressources implique la planification, l'allocation et le suivi des ressources nécessaires à un projet, comme le personnel, les matériaux et le temps.
                     </p>
                 </div>
             </div>
