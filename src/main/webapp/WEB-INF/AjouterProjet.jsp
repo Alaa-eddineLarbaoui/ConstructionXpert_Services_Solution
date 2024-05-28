@@ -1,41 +1,37 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 22/05/2024
-  Time: 13:30
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
 
-
     <style>
         body {
+            background-image: url("https://myeditor.ru/wp-content/uploads/5/5/7/5578476d48fe709294a2adfb6f81f9d2.jpeg");
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-size: cover;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 1px 23px 1px 23px ;
-
+            margin: 1px 23px 1px 23px;
         }
 
         #container {
-            background-color: white;
             padding: 2px 40px;
-            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /*max-width: 500px;*/
             width: 100%;
-            height: 80%;
+            height: 82%;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
         }
 
         #container h1 {
             text-align: center;
             margin-bottom: 20px;
+            color: white;
         }
 
         form {
@@ -46,20 +42,21 @@
         label {
             margin-bottom: 5px;
             font-weight: bold;
-            color: #333;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
         }
-
 
         .date1 > label {
             margin-bottom: 5px;
             font-weight: bold;
-            color: #333333;
+            color: white;
+
+            padding: 5px;
+            border-radius: 5px;
         }
 
-
-        input[type="date"], input[type="text"],
-        input[type="number"],
-        textarea {
+        input[type="date"], input[type="text"], input[type="number"], textarea {
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -67,8 +64,8 @@
             width: 100%;
             box-sizing: border-box;
         }
-        input[type="date"],
-        textarea {
+
+        input[type="date"], textarea {
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -76,14 +73,15 @@
             width: 100%;
             box-sizing: border-box;
         }
+
         textarea {
             resize: vertical;
             height: 75px;
         }
 
         button {
-            background-color: #007BFF;
-            color: white;
+            background-color: #f7b317;
+            color: black;
             border: none;
             padding: 10px 15px;
             font-size: 16px;
@@ -94,34 +92,63 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #d4af37; /* Une teinte plus foncée de l'or pour l'effet hover */
         }
+
 
         a {
             text-decoration: none;
         }
 
-
-
-        .Inputdate{
+        .Inputdate {
             display: flex;
             gap: 32px;
             margin-bottom: 9px;
         }
-        .date1{
+
+        .date1 {
             width: 50%;
+        }
+      @media (max-width: 1200px) {
+          #container{
+                  padding: 2px 40px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  width: 100%;
+                  height: 45%;
+                  background: transparent;
+                  border: 2px solid rgba(255, 255, 255, 0.5);
+                  border-radius: 20px;
+                  backdrop-filter: blur(15px);
+
+
+          }
+
+      }
+
+        @media (max-width: 768px) {
+            #container{
+                padding: 2px 40px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                height: 74%;
+                background: transparent;
+                border: 2px solid rgba(255, 255, 255, 0.5);
+                border-radius: 20px;
+                backdrop-filter: blur(15px);
+
+
+            }
         }
     </style>
 </head>
 <body>
 <div id="container">
-    <h1>Add projet </h1>
+    <h1>Add projet</h1>
     <form action="add" method="post">
         <div class="Inputdate">
             <div class="date1">
-                <label  class="label" for="nom_projet">Nom du Projet:</label>
+                <label class="label" for="nom_projet">Nom du Projet:</label>
                 <input type="text" id="nom_projet" name="nom_projet" required><br>
-
             </div>
             <div class="date1">
                 <label class="label" for="budget">Budget:</label>
@@ -136,10 +163,8 @@
             <div class="date1">
                 <label class="label" for="dateFin">Date de Fin:</label>
                 <input type="date" id="dateFin" name="dateFin" required><br>
-
             </div>
         </div>
-
 
         <label for="description_projet">Description du Projet:</label>
         <textarea id="description_projet" name="description_projet" rows="4" required></textarea><br>
@@ -150,7 +175,6 @@
         <a href="/ConstructionXpert_Services_Solution_war_exploded/add">
             <button type="submit">Ajouter</button>
         </a>
-
     </form>
 </div>
 </body>
