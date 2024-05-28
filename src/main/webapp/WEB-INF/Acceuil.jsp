@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Liste des chambres</title>
+    <title>Accueil</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style><%@ include file="Style.css"%></style>
